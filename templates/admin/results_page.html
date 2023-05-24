@@ -1,0 +1,314 @@
+<!-- Raikage The Third -->
+
+{% extends 'admin/base_admin.html' %}
+
+{% block title %}
+    Résultat de la recherche 
+{% endblock title %}
+
+{% block content %}
+{% load static %}
+
+<div class='content container-fluid'>
+    <div class="comp-sec-wrapper">
+
+            {% if sub %}
+                <section class="comp-section">
+                    <div class="section-header">
+                        <h4 class="section-title">Abonnés</h4>
+                        <div class="line"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title">
+                                        {% if sub.count > 1 %}
+                                            {{ sub.count }} abonnés trouvés
+                                        {% else %}
+                                            {{ sub.count }} abonné trouvé
+                                        {% endif %}
+                                    </h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-center mb-0 datatable">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for abonne in sub %}
+                                                    <tr>
+                                                        <td>{{ abonne.email }}</td>
+                                                    </tr>
+                                                {% endfor %}
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            {% endif %}
+            
+            {% if de %}
+                <section class="comp-section">
+                    <div class="section-header">
+                        <h4 class="section-title">Devis</h4>
+                        <div class="line"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title">
+                                        {% if de.count > 1 %}
+                                            {{ de.count }} devis trouvés
+                                        {% else %}
+                                            {{ de.count }} devis trouvé
+                                        {% endif %}
+                                    </h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-center mb-0 datatable">
+                                            <thead>
+                                                <tr>
+                                                    <th>Identité du client</th>
+                                                    <th>Service requis</th>
+                                                    <th>Delai</th>
+                                                    <th>Mode de paiement</th>
+                                                    <th>Adresse Mail</th>
+                                                    <th class="text-right">Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for devis in de %}
+                                                    <tr>
+                                                        <td>{{devis.name}}</td>
+                                                        <td>{{devis.required_service}}</td>
+                                                        <td>{{devis.delivery_delay}}</td>
+                                                        <td>{{devis.payment_mode}}</td>
+                                                        <td>{{devis.email}}</td>
+                                                        <td class="text-right">
+                                                            <div class="actions">
+                                                                <a href="{% url 'devis_detail' devis.pk %}" class="btn btn-sm bg-success-light mr-2">
+                                                                    <i class="fas fa-eye"></i>
+                                                                </a>
+                                                                <a href="{% url 'devis_delete' devis.pk %}" class="btn btn-sm bg-danger-light">
+                                                                    <i class="fas fa-trash"></i>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                {% endfor %}
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            {% endif %}
+            
+            {% if vm %}
+                <section class="comp-section">
+                    <div class="section-header">
+                        <h4 class="section-title">Messages de visiteurs</h4>
+                        <div class="line"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title">
+                                        {% if vm.count > 1 %}
+                                            {{ vm.count }} messages trouvés
+                                        {% else %}
+                                            {{ vm.count }} message trouvé
+                                        {% endif %}</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-center mb-0 datatable">
+                                            <thead>
+                                                <tr>
+                                                    <th>Auteur</th>
+                                                    <th>Adresse Mail</th>
+                                                    <th>Sujet</th>
+                                                    <th class="text-right">Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for message in vm %}
+                                                    <tr>
+                                                        <td>{{message.author}}</td>
+                                                        <td>{{message.email}}</td>
+                                                        <td>{{message.subject}}</td>
+                                                        <td class="text-right">
+                                                            <div class="actions">
+                                                                <a href="{% url 'message_detail' message.pk %}" class="btn btn-sm bg-success-light mr-2">
+                                                                    <i class="fas fa-eye"></i>
+                                                                </a>
+                                                                <a href="{% url 'message_delete' message.pk %}" class="btn btn-sm bg-danger-light">
+                                                                    <i class="fas fa-trash"></i>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                {% endfor %}
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            {% endif %}
+
+            {% if pu %}
+                <section class="comp-section">
+                    <div class="section-header">
+                        <h4 class="section-title">Publications</h4>
+                        <div class="line"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title">
+                                        {% if pu.count > 1 %}
+                                            {{ pu.count }} publications trouvées
+                                        {% else %}
+                                            {{ pu.count }} publication trouvée
+                                        {% endif %}</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-center mb-0 datatable">
+                                            <thead>
+                                                <tr>
+                                                    <th>Titre</th>
+                                                    <th class="text-right">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for publi in pu  %}
+                                                    <tr>
+                                                        <td>{{ publi.title }}</td>
+                                                        <td class="text-right">
+                                                            <div class="actions">
+                                                                <a href="{% url 'publication' publi.pk %}" class="btn btn-sm bg-success-light mr-2">
+                                                                    <i class="fas fa-eye"></i>
+                                                                </a>
+                                                                <a href="{% url 'publication_send' publi.pk %}" class="btn btn-sm bg-success-light mr-2">
+                                                                    <i class="fas fa-paper-plane"></i>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                {% endfor %}
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            {% endif %}
+            
+            {% if us %}
+                <section class="comp-section">
+                    <div class="section-header">
+                        <h4 class="section-title">Utilisateurs</h4>
+                        <div class="line"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title">
+                                        {% if us.count > 1 %}
+                                            {{ us.count }} utilisateurs trouvés
+                                        {% else %}
+                                            {{ us.count }} utilisateur trouvé
+                                        {% endif %}</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-center mb-0 datatable">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nom d'utilisateur</th>
+                                                    <th>Adresse Mail</th>
+                                                    <th>Fonction</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for user in us  %}
+                                                    <tr>
+                                                        <td>
+                                                            <h2 class="table-avatar">
+                                                                {% if user.profile.photo %}
+                                                                    <a class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="{{ user.profile.photo.url }}" alt=""></a>
+                                                                {% else %}
+                                                                    <a class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="{% static 'img/no-pfp.jpg' %}" alt=""></a>
+                                                                {% endif %}
+                                                                
+                                                                <a>{{ user.username }}</a>
+                                                            </h2>
+                                                        </td>
+                                                        <td>{{ user.email }}</td>
+                                                        <td>{{ user.profile.fonction }}</td>
+                                                    </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            {% endif %}
+            
+            {% if not sub and not de and not vm and not pu and not us%}
+                <section class="comp-section">
+                    <div class="section-header">
+                        <h4 class="section-title">Résultats pour {{ query }}</h4>
+                        <div class="line"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title"></h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <div class="text-center">
+                                            Aucun résultat ne correspond à votre recherche.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            
+            {% endif %}
+            
+    </div>
+</div>
+
+{% endblock content %}

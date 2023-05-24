@@ -1,0 +1,63 @@
+<!-- Raikage The Third -->
+
+{% extends "admin/base_admin.html" %}
+
+{% block title %}
+Ajout de publication
+{% endblock title %}
+
+
+{% block content %}
+<div class='content container-fluid'>
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">Ajouter une publication</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'dashboard' %}">Tableau de bord</a></li>
+                    <li class="breadcrumb-item active">Ajout d'un message de publication</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-12 d-flex">
+            <div class="card flex-fill">
+                <div class="card-header">
+                    <h5 class="card-title"></h5>
+                    {% for message in messages  %}
+                        <div class="alert alert-success">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="card-body">
+                    <form action="" method='POST' enctype = 'multipart/form-data'>
+                        {% csrf_token %}
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label">Titre</label>
+                            <div class="col-lg-9">
+                                {{ form.title }}
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label">Message</label>
+                            <div class="col-lg-9">
+                                {{ form.message }}
+                            </div>
+                        </div>
+                        <div class="text-left">
+                            <button type="submit" class="btn btn-primary">Envoyer</button>
+                        </div>
+                        <div class="text-right">
+                            <a href='{{ request.META.HTTP_REFERER }}' class="btn btn-danger">Annuler</a>
+                        </div>
+                    </form>
+                </div>
+                <div class='card-footer'>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,70 @@
+<!-- Raikage The Third -->
+
+{% extends "admin/base_admin.html" %}
+
+{% block title %}
+Detail de demande
+{% endblock title %}
+
+{% block content %}
+<div class="content container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card flex-fill">
+                    <div class="card-header">
+                        <ul role="tablist" class="nav nav-tabs card-header-tabs float-right">
+                            <li class="nav-item">
+                                <a href="#tab-1" data-toggle="tab" class="nav-link active">Infos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#tab-2" data-toggle="tab" class="nav-link">Spécifications</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#tab-3" data-toggle="tab" class="nav-link">Cahier de charges</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content pt-0">
+                            <div role="tabpanel" id="tab-1" class="tab-pane fade show active">
+                                <h5 class="card-title">Informations sur le client</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><strong>Nom : </strong>{{ devis.name }}</li>
+                                    <li class="list-group-item"><strong>Email : </strong>{{ devis.email }} </li>
+                                    <li class="list-group-item"><strong>Téléphone : </strong>{{ devis.phone }}</li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" id="tab-2" class="tab-pane fade">
+                                <h5 class="card-title">Détails généraux sur le service</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><strong>Service : </strong>{{ devis.required_service }}</li>
+                                    <li class="list-group-item"><strong>Délai de livraison : </strong>{{ devis.delivery_delay }}</li>
+                                    <li class="list-group-item"><strong>Mode de paiement : </strong>{{ devis.payment_mode }}</li>
+                                    <li class="list-group-item"><strong>Description : </strong>{{ devis.description }}</li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" id="tab-3" class="tab-pane fade">
+                                <h5 class="card-title">Cahier de charges</h5>
+                                <div class="card-body">
+                                    <iframe src="{{ devis.file.url }}" frameborder="0" width='100%' height='1000'></iframe>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a class="btn btn-primary" href="{% url 'devis_all' %}">Retourner vers la liste</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+<!---->
+
+
+

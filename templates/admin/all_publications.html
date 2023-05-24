@@ -1,0 +1,109 @@
+<!-- Raikage The Third -->
+
+{% extends "admin/base_admin.html" %}
+
+{% block title %}
+Messages de la Newsletter
+{% endblock title %}
+
+{% block search %} 
+<form method='GET' action='{% url "publications" %}'>
+    <input type="text" name='q' class="form-control" placeholder="Rechercher une publication...">
+ </form>
+{% endblock search %}
+
+
+{% block content %}
+<div class="content container-fluid">
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">Liste des publications</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'dashboard' %}">Tableau de bord</a></li>
+                    <li class="breadcrumb-item active">Toutes les publications</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card card-table">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-center mb-0 datatable">
+                            <thead>
+                                <tr>
+                                    <th>Titre</th>
+                                    <th class="text-right">Statut du message</th>
+                                    <th class="text-right">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for p in publications %}
+                                    <tr>
+                                        <td>{{ p.title }}</td>
+                                        <td class="text-right">
+                                            {% if p.sent_status == False %}
+                                                <span class="badge badge-danger">Non envoyé</span>
+                                            {% else %}
+                                                <span class="badge badge-success">Envoyé</span>
+                                            {% endif %}
+                                        </td>
+                                        <td class="text-right">
+                                            <div class="actions">
+                                                <a href="{% url 'publication' p.pk %}" class="btn btn-sm bg-success-light mr-2">
+                                                    <i class="fas fa-eye"></i>
+                                                </a>
+                                                <a href="{% url 'publication_send' p.pk %}" class="btn btn-sm bg-success-light mr-2">
+                                                    <i class="fas fa-paper-plane"></i>
+                                                </a>
+                                                <a href="{% url 'publication_delete' p.pk %}" class="btn btn-sm bg-danger-light">
+                                                    <i class="fas fa-trash"></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <ul class="pagination">
+                {% if publications.has_previous %}
+                    <li class="page-item ">
+                        <a class="page-link" href="?page={{ publications.previous_page_number }}" tabindex="-1">Précedent</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="?page=1">1</a>
+                    </li>
+                {% endif %}
+                <li class="page-item active">
+                    <a class="page-link" href="#">{{ publications.number }} <span class="sr-only">(current)</span></a>
+                </li>
+                {% if publications.has_next %}
+                    <li class="page-item"><a class="page-link" href="?page={{ publications.next_page_number }}">{{ publications.next_page_number }}</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ publications.next_page_number }}">Suivant</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ publications.paginator.num_publications }}">Dernière page</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+        <div class="col-sm-12">
+            <div class="text-right">
+                <a class='btn btn-primary' href="{% url 'add_publication' %}">Ajouter une publication</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock content %}

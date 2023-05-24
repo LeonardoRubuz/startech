@@ -1,0 +1,150 @@
+<!-- Raikage The Third -->
+
+{% extends 'base_visitors.html' %}
+
+{% block title %}
+Développement Mobile
+{% endblock title %}
+
+{% block main %}
+{% load static %}
+
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="{% url 'home' %}">Acceuil</a></li>
+                    <li>Développement Mobile</li>
+                </ol>
+                <h2>Développement Mobile</h2>
+            </div>
+        </section>
+        <!-- End Breadcrumbs -->
+
+        <!-- ======= Why Us Section ======= -->
+        <section id="why-us" class="why-us section-bg" style='background-color: white;'>
+            <div class="container-fluid" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+                        <div class="content">
+                            <h3>De la même façon qu’il existe plusieurs types de sites web (site vitrine, blog, site e-commerce, etc.), il existe également différents types d’applications mobiles aux usages et objectifs différents.
+                            </h3><br>
+                            <p>
+                                Pour pousser les mobinautes à télécharger votre application, vous devez vous assurer que celle-ci leur sera utile et répondra à un besoin.
+                                <br>
+                            </p><br>
+                        </div>
+                        <div class="accordion-list">
+                            <ul>
+                                <li>
+                                    <a data-toggle="collapse" class="collapse" href="#accordion-list-1"><span>01</span> Qu’est-ce qu’une application mobile hybride ? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                    <div id="accordion-list-1" class="collapse show" data-parent=".accordion-list">
+                                        <p>
+                                            Dans le monde des applications mobiles, deux systèmes d’exploitation dominent : IOS développé par Apple et le système Android made in Google.
+                                            Ce type d’application offre une facilité dans la maintenance parce qu’il n’y a qu’une seule version pour plusieurs plateformes. Vous économisez du temps et de l’argent.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a data-toggle="collapse" href="#accordion-list-2" class="collapsed"><span>02</span> Pourquoi une application hybride ?  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                    <div id="accordion-list-2" class="collapse" data-parent=".accordion-list">
+                                        <p>
+                                            Une application hybride est conçue pour une utilisation sur toutes les plateformes : Android et IOS, sans différence entre les versions. Son développement est rapide et sa gestion, facile : le code source reste unique. Ce qui facilite les futures mises à jour.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a data-toggle="collapse" href="#accordion-list-3" class="collapsed"><span>03</span> Différence entre une application native une application hybride et une web application ?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                    <div id="accordion-list-3" class="collapse" data-parent=".accordion-list">
+                                        <p>
+                                        En bref, les applications natives sont exactement cela, natives du système d'exploitation de l'utilisateur et donc construites selon ces directives. Les applications hybrides sont, en quelque sorte, des sites web dans un environnement natif.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a data-toggle="collapse" href="#accordion-list-3" class="collapsed"><span>04</span>  Les spécificités des applications mobiles natives  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                    <div id="accordion-list-3" class="collapse" data-parent=".accordion-list">
+                                        <p>
+                                            Les applications mobiles natives sont conçues pour une plateforme spécifique, telle que iOS pour l'iPhone ou Android pour un appareil Samsung. Elles sont téléchargées et installées via un magasin d'applications et ont accès aux ressources du système, telles que le GPS et la fonction appareil photo.
+                                        </p>
+                                        <br><br>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url({% static "/img/why-us.png" %});' data-aos="zoom-in" data-aos-delay="150">&nbsp;
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Why Us Section -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-5 align-items-stretch ">
+                    <img src="{% static '/img/img15.png' %}" alt="" id="bans" class="img-fluid">
+                </div>
+                <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+                    <div class="content">
+                        <h3><strong> Application mobile native</strong></h3>
+                        <i class="bx bx-check-double"></i> Une application native est une application créée individuellement pour un système d’exploitation mobile spécifique. En d’autres termes, il s’agit d’une application mobile qui ne fonctionne que sur Android, Windows phone ou encore iOS par exemple.
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-5 align-items-stretch ">
+                    <img src="{% static '/img/img14.png' %}" alt="" id="bans" class="img-fluid">
+                </div>
+                <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+                    <div class="content">
+                        <h3><strong> Application mobile hybride</strong></h3>
+                        <i class="bx bx-check-double"></i> Une application hybride est une application utilisant le navigateur web intégré du support et les technologies Web pour fonctionner sur différents OS.
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-5 align-items-stretch ">
+                    <img src="{% static '/img/img13.png' %}" alt="" id="bans" class="img-fluid">
+                </div>
+                <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+                    <div class="content">
+                        <h3><strong> Application web</strong></h3>
+                        <i class="bx bx-check-double"></i> Une application web est une application manipulable directement en ligne grâce à un navigateur web et qui ne nécessite donc pas d'installation sur les machines clientes, contrairement aux applications mobiles.
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+        <div class="col-lg-12 d-flex flex-column justify-content-center align-items-stretch">
+            <div class="content">
+                <p>
+                    Nous réaliserons votre projet du début jusqu’à la fin. Notre équipe reste à votre disposition pour écouter vos besoins et vous aider à atteindre vos objectifs. Si vous avez des questions, n'hésiter pas à nous appeler.
+                </p>
+            </div>
+        </div>
+    </main><!-- End #main -->
+
+{% endblock main %}
+
+
+{% block newsletter %}
+{% for message in messages  %}
+
+<div class="alert alert-success">
+    {{ message }}
+</div>
+
+{% endfor %}
+<h4>Rejoignez notre newsletter</h4>
+<p>Entrez votre adresse e-mail et soyez le premier à être informé de nos événements, nos offres spéciales ou des sujets concernant notre entreprise et ses membres.</p>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ subscriber }}
+    <input type="submit" value="S'abonner">
+</form>
+{% endblock newsletter %}

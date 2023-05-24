@@ -1,0 +1,35 @@
+<!-- Raikage The Third -->
+
+
+{% extends "admin/base_admin.html" %}
+
+{% block title %}
+
+{% endblock title %}
+
+
+{% block content %}
+<div class='content container-fluid'>
+    <div class="row">
+        <div class="col-12">
+            <div class="card flex-fill">
+                <div class="card-header">
+                    Message de {{ message.author }}
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class='list-group-item'><h5 class="card-title"><strong>Sujet</strong> : {{ message.subject }}</h5></li>
+                        <li class='list-group-item'><p class="card-text">{{ message.body }}.</p></li>
+                    </ul>
+                </div>
+                <div class="card-footer ">
+                    <a href="" class="btn btn-info">Répondre</a>
+                    <a href="{% url 'messages' %}" class="btn btn-primary">Retourner vers la liste</a>
+                    <a href="{% url 'message_delete' message.pk %}" class="btn btn-danger">Supprimer</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+

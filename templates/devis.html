@@ -1,0 +1,111 @@
+{% extends 'base_visitors.html' %}
+
+
+{% block main %}
+{% load static %}
+
+
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li><a href="{% url 'home' %}">Acceuil</a></li>
+                <li>Devis</li>
+            </ol>
+            <h2>Demander un devis</h2>
+        </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us section-bg">
+        <div class="container-fluid" data-aos="fade-up">
+            <div class="row">
+                <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+                    <div class="content">
+                    <h3><b>Comment demander un devis ?</b></h3>
+                    <p>
+                        Lorsque vous souhaitez obtenir un devis pour un produit ou un service, il est important
+                        que vous puissez fournir des informations claires et détaillées
+                        pour que le devis puisse être établi avec précision. Voici quelques informations que devez fournir :
+                    </p>
+                </div>
+                <div class="accordion-list">
+                    <ul>
+                        <li>
+                            <a data-toggle="collapse" class="collapse" href="#accordion-list-1"><span>01</span> Coordonnées <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1" class="collapse show" data-parent=".accordion-list">
+                                <p>
+                                Vous devez fournir des informations de contact précises, telles que le nom, l'adresse e-mail et le numéro de téléphone, afin qu'on puisse vous contacter pour obtenir des informations supplémentaires si nécessaire.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a data-toggle="collapse" href="#accordion-list-2" class="collapsed"><span>02</span>Délais de livraison <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-2" class="collapse" data-parent=".accordion-list">
+                                <p>
+                                Vous devez préciser les délais de livraison souhaités pour le produit ou le service. Cela nous aidera à déterminer si le délai demandé est réalisable et s'il y a des coûts supplémentaires associés à une livraison plus rapide.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a data-toggle="collapse" href="#accordion-list-3" class="collapsed"><span>03</span>Budget <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-3" class="collapse" data-parent=".accordion-list">
+                                <p>
+                                Vous devez fournir un budget approximatif pour le produit ou le service demandé. Cela nous permettra de fournir un devis qui correspond à vos attentes et vos contraintes budgétaires.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a data-toggle="collapse" href="#accordion-list-4" class="collapsed"><span>04</span>Conditions de paiement  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-4" class="collapse" data-parent=".accordion-list">
+                                <p>
+                                Vous devez préciser les conditions de paiement que vous souhaitez, telles que les modes de paiement acceptés et les modalités de paiement (paiement intégral à la commande ou paiement échelonné).
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a data-toggle="collapse" href="#accordion-list-5" class="collapsed"><span>05</span>Description du produit ou du service <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-5" class="collapse" data-parent=".accordion-list">
+                                <p>
+                                Il est important de décrire en détail le produit ou le service pour lequel vous souhaitez obtenir un devis. Cette description doit inclure des informations telles que la quantité, la qualité, les dimensions et les spécifications techniques.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("{% static "/img/why-us.png" %}");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
+        </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>Demander un devis</h2>
+                <p>  En fournissant ces informations de manière claire et détaillée, vous pouvez aider à s'assurer que le devis que nous vous fournirons est précis et répond à vos besoins spécifiques.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 d-flex align-items-stretch">
+                </div>
+                <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
+
+                    <!-- ======= Inclure le formulaire ici  ======= -->
+                    <form method='POST' enctype='multipart/form-data'>
+                        {% csrf_token %}
+                        <div class='form-group'>
+                            {{ form }}
+                            <input class='btn btn-primary' type="submit" value='Envoyer le devis'>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Contact Section -->
+</main><!-- End #main -->
+
+{% endblock main %}
+
+{% block newsletter %}
+{% endblock newsletter %}

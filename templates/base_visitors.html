@@ -1,0 +1,145 @@
+<!-- Raikage The Third -->
+
+{% load static %}
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <title>{% block title %}{% endblock title %}</title>
+ 
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+      
+        <!-- Favicons -->
+        <link href='{% static "img/favicon.png" %}' rel="icon">
+        <link href='{% static "img/apple-touch-icon.png" %}' rel="apple-touch-icon">
+      
+        <!-- Google Fonts -->
+        <link href='{% static "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" %}' rel="stylesheet">
+      
+        <!-- Vendor CSS Files -->
+        <link href='{% static "vendor/bootstrap/css/bootstrap.min.css" %}' rel="stylesheet">
+        <link href='{% static "vendor/icofont/icofont.min.css" %}' rel="stylesheet">
+        <link href='{% static "vendor/boxicons/css/boxicons.min.css" %}' rel="stylesheet">
+        <link href='{% static "vendor/remixicon/remixicon.css" %}' rel="stylesheet">
+        <link href='{% static "vendor/venobox/venobox.css" %}' rel="stylesheet">
+        <link href='{% static "vendor/owl.carousel/owl.carousel.min.css" %}' rel="stylesheet">
+        <link href='{% static "vendor/aos/aos.css" %}' rel="stylesheet">
+      
+        <!-- Template Main CSS File -->
+        <link href='{% static "css/style.css" %}' rel="stylesheet">
+      
+    </head>
+    
+
+    <body>
+<!-- Page loader -->
+<!-- ======= Header ======= -->
+        <header id="header" class="fixed-top ">
+            <div class="container d-flex align-items-center">
+                <h1 class="logo mr-auto"><a href="{% url 'home' %}">Lyon Technology</a></h1>
+                <nav class="nav-menu d-none d-lg-block">
+                    <ul>
+                        <li class="active"><a href="{% url 'home' %}">Acceuil</a></li>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav><!-- .nav-menu -->
+
+                <a href="{% url 'devis' %}" class="get-started-btn scrollto">DEMANDER UN DEVIS</a>
+            </div>
+        </header><!-- End Header -->
+
+{% block main %}{% endblock main %}
+
+
+<!-- ======= Footer ======= -->
+        <footer id="footer">
+            <div class="footer-newsletter">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6">
+                            {% block newsletter %}
+                            {% endblock newsletter %}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 footer-contact">
+                            <h3>Lyon Technology®</h3>
+                            <p>
+                                11e Etage, Immeuble Jonya
+                                8884 Av. du Plateau, Commune de la Gombe
+                                Kinshasa, RDC<br>
+                                <strong>Phone:</strong>  <p>+243 831 157 924</p>
+                                                        <p>+243 972 369 183</p><br>
+                                <strong>Email:</strong> info@lyontech.com<br>
+                            </p>
+                        </div>
+                        <div class="col-lg-3 col-md-6 footer-links">
+                            <h4>Liens Utiles</h4>
+                            <ul>
+                                <li><i class="bx bx-chevron-right"></i> <a href="{% url 'home' %}">Acceuil</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="{% url 'home' %}#about">À propos</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="{% url 'home' %}#services">Services</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="{% url 'home' %}#team">Team</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="{% url 'home' %}#contact">Contact</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="{% url 'devis' %}">Devis</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-6 footer-links">
+                            <h4>Nos Services</h4>
+                            <ul>
+                                <li><i class="bx bx-chevron-right"></i> <a href="{% url 'websitedev' %}">Développement web</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="{% url 'softwaredev' %}">Développement Desktop</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="{% url 'mobileapp' %}">Développement Mobile</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="{% url 'marketing' %}">Marketing Digital</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-6 footer-links">
+                            <h4>Nos réseaux sociaux</h4>
+                            <div class="social-links mt-3">
+                                <a target="_blank"href="https://www.facebook.com/StartechGroupRDC?mibextid=ZbWKwL" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                <a target="_blank"href="https://www.instagram.com/lyon_technology/?utm_medium=copy_link&fbclid=IwAR3tGe4FH_3gkACX6reizEIO8_kOas7beOQi8-qYzrcxWhYvGDb1Mo7pDOE" class="instagram"><i class="bx bxl-instagram"></i></a>
+                                <a target="_blank"href="https://www.linkedin.com/company/lyon-technology" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container footer-bottom clearfix">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>Star-Tech Group®</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    Designed by <a href="{% url 'login' %}" target='_blank'>Star_Tech®</a>
+                </div>
+            </div>
+        </footer><!-- End Footer -->
+
+
+<!-- Vendor JS Files -->
+        <script src='{% static "vendor/jquery/jquery.min.js" %}'></script>
+        <script src='{% static "vendor/bootstrap/js/bootstrap.bundle.min.js" %}'></script>
+        <script src='{% static "vendor/jquery.easing/jquery.easing.min.js" %}'></script>
+        <script src='{% static "vendor/php-email-form/validate.js" %}'></script>
+        <script src='{% static "vendor/waypoints/jquery.waypoints.min.js" %}'></script>
+        <script src='{% static "vendor/isotope-layout/isotope.pkgd.min.js" %}'></script>
+        <script src='{% static "vendor/venobox/venobox.min.js" %}'></script>
+        <script src='{% static "vendor/owl.carousel/owl.carousel.min.js" %}'></script>
+        <script src='{% static "vendor/aos/aos.js" %}'></script>
+
+<!-- Template Main JS File -->
+        <script src='{% static "js/main.js" %}'></script>
+
+    </body>
+</html>

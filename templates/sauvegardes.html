@@ -1,0 +1,120 @@
+<div class="footer-newsletter">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <h4>Rejoignez notre newsletter</h4>
+                <p>Entrez votre adresse e-mail et soyez le premier à être informé de nos événements, nos offres spéciales ou des sujets concernant notre entreprise et ses membres.</p>
+                <form action="" method="post">
+                    <input type="email" name="email"><input type="submit" value="S'abonner">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="form-row">
+    <div class="form-group col-md-6">
+        <label for="name">Votre Nom</label>
+        <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Veuillez entrer votre nom" />
+        <div class="validate">
+        </div>
+    </div>
+    <div class="form-group col-md-6">
+        <label for="name">Votre Email</label>
+        <input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Veuillez entrer une adresse email valide" />
+        <div class="validate">
+        </div>
+    </div>
+</div>
+<div class="form-group">
+    <label for="name">Sujet</label>
+    <input type="text" class="form-control" name="sujet" id="sujet" data-rule="minlen:4" data-msg="Veuillez entrer votre sujet" />
+    <div class="validate">
+    </div>
+</div>
+<div class="form-group">
+    <label for="name">Message</label>
+    <textarea class="form-control" name="message" id="message" rows="10" data-rule="required" data-msg="Veuillez écrire un message"></textarea>
+    <div class="validate">
+    </div>
+</div>
+<div class="mb-3">
+    <div class="loading">Chargement en cours</div>
+    <div class="error-message"></div>
+    <div class="sent-message">Votre message a été envoyé. Merci!</div>
+</div>
+    <div class="text-center"><button type="submit">Envoyer le message</button></div>
+
+
+
+
+
+
+
+
+
+
+    <form action="" method="post" role="form" class="php-email-form">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="name">Votre Nom</label>
+                <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Veuillez entrer votre nom" />
+                <div class="validate"></div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="name">Votre Email</label>
+                <input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Veuillez entrer une adresse email valide" />
+                <div class="validate"></div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="name">Quel service avez vous besoin</label>
+                <input type="text" name="service" class="form-control" id="service" data-rule="minlen:4" data-msg="Veuillez entrer le service dont vous avez besoin" />
+                <div class="validate"></div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="name">Votre numéro</label>
+                <input type="tel" class="form-control" name="num" id="num" data-rule="minlen:4" data-msg="Veuillez entrer un numéro de téléphone valide" />
+                <div class="validate"></div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="name">Délais de livraison</label>
+                <input type="text" name="delais" class="form-control" id="delais" data-rule="minlen:4" data-msg="Veuillez entrer votre délais de livraison" />
+                <div class="validate"></div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="name">Quel est votre budget(en USD)</label>
+                <input type="text" class="form-control" name="budget" id="budget" data-rule="minlen:4" data-msg="Veuillez entrer votre budget" />
+                <div class="validate"></div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="name">Modalité de paiement</label>
+                <input type="text" name="condition" class="form-control" id="condition" data-rule="minlen:4" data-msg="Veuillez entrer la condition de paiement" />
+                <div class="validate"></div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="name">Cahier de charge (Word,PDF)</label>
+                <input type="file" name="cahier" class="form-control" id="cahier" data-rule="minlen:4" data-msg="Veuillez upload votre cahier de charge" />
+                <div class="validate"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name">Décrivez votre projet</label>
+            <textarea class="form-control" name="message" id="message"rows="10" data-rule="required" data-msg="Veuillez décrire votre projet"></textarea>
+            <div class="validate"></div>
+        </div>
+        <div class="mb-3">
+            <div class="loading">Chargement en cours</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Votre devis a été envoyé. Merci!</div>
+        </div>
+        <div class="text-center"><button type="submit" value='submit'>Envoyer le devis</button></div>
+    </form>

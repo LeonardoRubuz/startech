@@ -1,0 +1,198 @@
+<!-- Raikage The Third -->
+
+{% extends 'base_visitors.html' %}
+
+{% block title %}
+Création de logiciels
+{% endblock title %}
+
+{% block main %}
+{% load static %}
+
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li><a href="{% url 'home' %}">Acceuil</a></li>
+                <li>Développement Desktop</li>
+            </ol>
+            <h2>Développement Desktop</h2>
+        </div>
+    </section>
+    <!-- End Breadcrumbs -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us section-bg" style='background-color: white;'>
+        <div class="container-fluid" data-aos="fade-up">
+            <div class="row">
+                <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+                    <div class="content">
+                        <h3>Des logiciels complet et intégré pour la gestion des projets et le staffing des équipes, nous concevons des ERP sur le cloud pour les sociétés de services
+                        </h3><br>
+                        <p>
+                        Améliorez le pilotage des projets, simplifiez le staffing et automatisez la facturation Une solution complète et intuitive
+                        <br>
+                        </p><br>
+                    </div>
+                    <div class="accordion-list">
+                        <ul>
+                            <li>
+                                <a data-toggle="collapse" class="collapse" href="#accordion-list-1"><span>01</span> Logiciels de gestion des supermarchés <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-1" class="collapse show" data-parent=".accordion-list">
+                                    <p>
+                                    Un logiciel pour supermarchés aide les responsables de magasin à effectuer quotidiennement des opérations d'inventaire, de commande et de recrutement. Il contribue à la gestion des stocks grâce à des outils 
+                                    analytiques qui facilitent la commande prédictive et le reporting des ventes. La plupart de ces applications incluent les intégrations de caisse, la maintenance de la loterie et les options de gestion du carburant.
+                                    Découvrez d'autres moyens d'accroître les profits de votre supermarché avec un logiciel de caisse ou un logiciel de gestion pour commerce de détail.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a data-toggle="collapse" href="#accordion-list-2" class="collapsed"><span>02</span> Logiciels de gestion pharmaceutique <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-2" class="collapse" data-parent=".accordion-list">
+                                    <p>
+                                    La traçabilité des produits pharmaceutiques et médicaments est obligatoire. Notre logiciels de gestion de stock de pharmacie permet d’assurer cela, les professions qui gèrent des stocks pharmaceutiques et de médicamenteux sont contraints à la gestion d’une grande quantité d’informations.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a data-toggle="collapse" href="#accordion-list-3" class="collapsed"><span>03</span> Logiciels de gestion des boutiques d'habillement<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-3" class="collapse" data-parent=".accordion-list">
+                                    <p>
+                                    Contrairement à d’autres logiciels magasin, notre logiciels est paramétré sur mesure selon vos besoins pour correspondre parfaitement aux spécificités de la vente au détail dans le milieu de la mode. Pas besoin de connaissances poussées en informatique, la prise en main de notre logiciel de caisse se veut intuitive. Son système d’encaissement est entièrement paramétrable en fonction de vos besoins.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a data-toggle="collapse" href="#accordion-list-3" class="collapsed"><span>04</span> Logiciels de gestion des restaurants <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-3" class="collapse" data-parent=".accordion-list">
+                                    <p>
+                                    Notre logiciel de gestion pour la restauration. Il vous permettra d’optimiser la gestion de votre restaurant et de vos services en toute simplicité. De la saisie tactile des commandes à la gestion des modes de paiement,
+                                    notre logiciel s’adapte à vos besoins pour mieux organiser vos services et la gestion de votre caisse, grâce à son tableau de bord simple et accessible, notre logiciel de gestion pour la restauration permet de générer des statistiques et de gérer des comptes clients en quelques clics.
+                                    </p>
+                                    <br><br>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("{% static "/img/why-us.png" %}");' data-aos="zoom-in" data-aos-delay="150">&nbsp;
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Why Us Section -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-5 align-items-stretch ">
+                <img src="{% static '/img/img12.jpg' %}" alt="" id="bans" class="img-fluid">
+            </div>
+            <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+                <div class="content">
+                    <h3><strong> Logiciels de gestion des supermarchés</strong></h3>
+                    <i class="bx bx-check-double"></i> Facturation automatique
+                    <i class="bx bx-check-double"></i> Gestion de stock
+                    <i class="bx bx-check-double"></i> Impression et lecture des codes barres
+                    <i class="bx bx-check-double"></i> Rapport des ventes et ravitaillement
+                    <i class="bx bx-check-double"></i> Système des messages aux clients
+                    <i class="bx bx-check-double"></i> Alertes d'expiration et rupture de stock
+                    <i class="bx bx-check-double"></i> Gestion R.H (Paie, vacances, présence)
+                    <i class="bx bx-check-double"></i> Paiement par carte, Paypal, Coupons
+                    <i class="bx bx-check-double"></i> Rélevé des comptes, bilans
+                    <i class="bx bx-check-double"></i> Impression des DEVIS
+                </div>
+            </div>
+        </div><br><br>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-5 align-items-stretch ">
+                    <img src="{% static '/img/img11.jpg' %}" alt="" id="bans" class="img-fluid">
+                </div>
+                <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+                    <div class="content">
+                        <h3><strong>Logiciels de gestion pharmaceutique</strong></h3>
+                        <i class="bx bx-check-double"></i> Facturation automatique
+                        <i class="bx bx-check-double"></i> Gestion de stock
+                        <i class="bx bx-check-double"></i> Impression et lecture des codes barres
+                        <i class="bx bx-check-double"></i> Rapport des ventes et ravitaillement
+                        <i class="bx bx-check-double"></i> Système des messages aux clients
+                        <i class="bx bx-check-double"></i> Alertes d'expiration et rupture de stock
+                        <i class="bx bx-check-double"></i> Gestion R.H (Paie, vacances, présence)
+                        <i class="bx bx-check-double"></i> Paiement par carte, Paypal, Coupons
+                        <i class="bx bx-check-double"></i> Rélevé des comptes, bilans
+                        <i class="bx bx-check-double"></i> Impression des DEVIS
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-5 align-items-stretch ">
+                    <img src="{% static '/img/img10.jpg' %}" alt="" id="bans" class="img-fluid">
+                </div>
+                <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+                    <div class="content">
+                        <h3><strong>Logiciels de gestion des boutiques d'habillement</strong></h3>
+                        <i class="bx bx-check-double"></i> Facturation automatique
+                        <i class="bx bx-check-double"></i> Gestion de stock
+                        <i class="bx bx-check-double"></i> Impression des étiquettes
+                        <i class="bx bx-check-double"></i> Gestion R.H (Paie, vacances, présence)
+                        <i class="bx bx-check-double"></i> Lecture des codes barres
+                        <i class="bx bx-check-double"></i> Tableau de bord
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-5 align-items-stretch ">
+                    <img src="{% static '/img/img9.jpg' %}" alt="" id="bans" class="img-fluid">
+                </div>
+                <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+                    <div class="content">
+                        <h3><strong>Logiciels de gestion des restaurants</strong></h3>
+                        <i class="bx bx-check-double"></i> Facturation automatique
+                        <i class="bx bx-check-double"></i> Gestion de stock (Aliments, boissons, divers)
+                        <i class="bx bx-check-double"></i> Gestion des réservations et annulations
+                        <i class="bx bx-check-double"></i> Gestion des livraisons
+                        <i class="bx bx-check-double"></i> Gestion des commandes
+                        <i class="bx bx-check-double"></i> Gestion des tables
+                        <i class="bx bx-check-double"></i> Gestion R.H (Paie, vacances, présence)
+                        <i class="bx bx-check-double"></i> Alertes de rupture de stock
+                        <i class="bx bx-check-double"></i> Rélevé des comptes, bilans
+                        <i class="bx bx-check-double"></i> Interface des communication avec l'usine
+                        <i class="bx bx-check-double"></i> Minutage des commandes
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+        <div class="col-lg-12 d-flex flex-column justify-content-center align-items-stretch">
+            <div class="content">
+                <p>
+                Nous réaliserons votre projet du début jusqu’à la fin. Notre équipe reste à votre disposition pour écouter vos besoins et vous aider à atteindre vos objectifs. Si vous avez des questions, n'hésiter pas à nous appeler.
+                </p>
+            </div>
+        </div>
+    </div><!-- End About Us Section -->
+</main><!-- End #main -->
+
+{% endblock main %}
+
+
+
+{% block newsletter %}
+{% for message in messages  %}
+
+<div class="alert alert-success">
+    {{ message }}
+</div>
+
+{% endfor %}
+<h4>Rejoignez notre newsletter</h4>
+<p>Entrez votre adresse e-mail et soyez le premier à être informé de nos événements, nos offres spéciales ou des sujets concernant notre entreprise et ses membres.</p>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ subscriber }}
+    <input type="submit" value="S'abonner">
+</form>
+{% endblock newsletter %}

@@ -1,0 +1,422 @@
+<!-- Raikage The Third -->
+
+{% extends 'base_visitors.html' %}
+
+{% block title %}
+Acceuil
+{% endblock title %}
+
+{% block main %}
+{% load static %}
+
+<div id="preloader">
+    <div class="display-table">
+        <div class="display-tablecell">
+            <img src='{% static "img/loader.gif" %}' alt="">
+        </div>
+    </div>
+</div>
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center" style='background-image: url("static/img/fond.png");'>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+                <h1>Adoptez l’excellence et l'innovation pour chacun de vos projets </h1>
+                <h2>Parce que l’image de votre entreprise est votre carte de visite, nous soignons chaque détail pour donner à votre potentiel client la meilleure première impression possible.</h2>
+                <div class="d-lg-flex">
+                    <a href="#contact" class="btn-get-started scrollto">Parler à nos experts </a>
+                </div>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+                <img src="{% static '/img/hero-img.gif' %}" class="img-fluid animated" alt="">
+            </div>
+        </div>
+    </div>
+ </section>
+ <!-- End Hero -->
+
+<main id="main">
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>À propos</h2>
+                <p>Notre expertise, votre succès</p>
+            </div>
+            <div class="row content">
+                <div class="col-lg-6">
+                    <p>
+                    <a href="{% url 'home' %}">Lyon Technology</a> est une entreprise de solutions des technologies de l'information opérant à Kinshasa/RDC,
+                    qui fournit un ensemble des services sur une base de conseil tels que : </p>
+                    <ul>
+                        <li><i class="ri-check-double-line"></i><a href="{% url 'websitedev' %}">Développement Web</a>: Conception et gestion des sites web (site vitrine, site institutionnel, site marchand ou e-commerce, blog, application web...);</li>
+                        <li><i class="ri-check-double-line"></i><a href="{% url 'softwaredev' %}">Développement Desktop</a>: Création de logiciel personnalisé de gestion pharmaceutique, des supermarchés, des restaurants, des boutiques d'habillement;</li>
+                        <li><i class="ri-check-double-line"></i><a href="{% url 'mobileapp' %}">Développement Mobile</a>: Création et gestion des applications mobile; </li>
+                        <li><i class="ri-check-double-line"></i><a href="{% url 'marketing' %}">Marketing Digital</a>: Référencement (SEO), publicité en ligne (SEA), marketing de contenu, email marketing, analyse de données, marketing d'influence, marketing mobile;</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0">
+                    <p>
+                        Formés des experts hommes et femmes motivés dans un but commun et précis afin d’apporter à votre entreprise le meilleur des technologies, avec un personnel professionnel bien formé, nous pouvons vous aider à maintenir et à moderniser votre infrastructure informatique et à résoudre divers problèmes spécifiques à l'infrastructure auxquels
+                        une entreprise peut être confrontée. Nous sommes les créateurs sur lesquels vous pouvez compter pour une solution parfaite.
+                    </p>
+                    <br>
+                    <p>
+                        Grâce à la volonté d'une équipe et l'ambition de celle-ci, nous avons pu nous positionner en un temps record comme une agence synonyme d'innovation et d’excellence au niveau francophone.
+                    </p>
+                </div>
+            </div>
+         </div>
+    </section>
+    <!-- End About Us Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us section-bg">
+        <div class="container-fluid" data-aos="fade-up">
+            <div class="row">
+                <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+                    <div class="content">
+                        <h3><b>Pourquoi nous choisir ?</b></h3>
+                        <p>
+                            Grâce à nos services, vous n’allez non seulement profiter de l’expertise de grands experts reconnus mais vous allez réellement posséder un actif de propriété intellectuelle qui vous rapportera beaucoup d'argent au fil du temps et fera passer votre entreprise et votre vision au niveau supérieur.
+                        </p>
+                    </div>
+                    <div class="accordion-list">
+                        <ul>
+                            <li>
+                                <a data-toggle="collapse" class="collapse" href="#accordion-list-1"><span>01</span> Accompagnement client <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-1" class="collapse show" data-parent=".accordion-list">
+                                    <p>
+                                        À la fois agence web et agence conseil, nous vous accompagnons dans toutes les étapes de création de votre projet. Toute l’équipe est à votre écoute pour répondre à vos questions avant, pendant et après la phase de production. Profitez-en !
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a data-toggle="collapse" href="#accordion-list-2" class="collapsed"><span>02</span>Haute qualité graphique <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-2" class="collapse" data-parent=".accordion-list">
+                                    <p>
+                                        Originalité et qualité graphique sont deux conditions sine qua non à la consolidation de l'image grâce à l’identité visuelle d’une entreprise. Conscients de cette double nécessité, nous tenons une veille constante afin de toujours rester à la pointe des tendances.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a data-toggle="collapse" href="#accordion-list-3" class="collapsed"><span>03</span>Sites Internet complets<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-3" class="collapse" data-parent=".accordion-list">
+                                    <p>
+                                        Internet est notre spécialité. Non contents de délivrer des sites Internet d'une grande qualité, nous allons plus loin et abordons vos projets web de manière globale : design unique, système de gestion de contenu, analyse du trafic, maintenance, SEO...
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a data-toggle="collapse" href="#accordion-list-4" class="collapsed"><span>04</span>Maîtrise des budgets <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-4" class="collapse" data-parent=".accordion-list">
+                                    <p>
+                                        A chaque problème il existe une solution, nos offres sont adaptées à votre budget et ce, quel que soit le type ou l’envergure de votre projet. Contactez-nous afin d'examiner ensemble votre projet autour d’un café !
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("static/img/why-us.png");' data-aos="zoom-in" data-aos-delay="150">&nbsp;
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Why Us Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills">
+        <div class="container" data-aos="fade-up">
+            <div class="row">
+                <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+                    <img src="{% static '/img/skills.png' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
+                    <h3>Nos technologies</h3>
+                    <p class="font-italic">
+                        Bien qu'utilisant plusieurs technologies phares du monde, notre entreprise est constituée d'une équipe d'experts, que ce soit au niveau des développements PHP, 
+                        intégration HTML/CSS (approches "Mobile first" ou "responsive design"), applications mobile, logiciel, Référencement, Templating, hébergement, performances et 
+                        maintenance.
+                    </p>
+                    <div class="skills-content">
+                        <img src="{% static 'img/tech.png' %}" class="img-fluid" alt=""> <!-- Ajouter des images liées aux technologies citées plus haut-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Skills Section -->
+
+    <!-- ======= Services Section ======= -->
+
+    <section id="services" class="services section-bg">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>Nos Services</h2>
+                <p>Sachez qu’une excellente expérience utilisateur est gage d’une excellente expérience acheteur, de ce fait c’est un honneur pour nous de mettre à votre disposition nos services haut de gamme qui ont aidé des milliers d’entrepreneurs et entreprises de renommée à se développer et passer au niveau supérieur !</p>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><img src="assets/img/ico7.png" class="img-fluid" alt="">
+                        </div>
+                        <h4><a href="{% url 'websitedev' %}">Développement Web</a></h4>
+                        <p>Nos experts sont à votre disposition pour créer tout type de site web : site vitrine, site marchand ou e-commerce, Blog, site institutionnel et tant d’autres...</p>
+                        <br><a href="{% url 'websitedev' %}" class="btn-learn-more">En savoir plus...</a>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="icon-box">
+                        <div class="icon"><img src="assets/img/ico6.png" class="img-fluid" alt="">
+                        </div>
+                            <h4><a href="{% url 'softwaredev' %}">Développement Desktop</a></h4>
+                            <p>Nos experts sont à votre disposition pour créer tout type de logiciel: logiciel de gestion des sites e-commerce, des restaurants, des magasins physiques ou en ligne, des supermarchés, des logiciels de gestion pharmaceutique, logiciel d’automatisation et tant d’autres...</p>
+                            <br><a href="{% url 'softwaredev' %}" class="btn-learn-more">En savoir plus...</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="icon-box">
+                            <div class="icon"><img src="assets/img/ico5.png" class="img-fluid" alt="">
+                            </div>
+                            <h4><a href="{% url 'mobileapp' %}">Développement Mobile</a></h4>
+                            <p>Nos experts conçoivent tout type d’applications sur mesure (Ios & Android)</p>
+                            <br><a href="{% url 'mobileapp' %}" class="btn-learn-more">En savoir plus...</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="icon-box">
+                            <div class="icon"><img src="assets/img/ico3.png" class="img-fluid" alt="">
+                            </div>
+                            <h4><a href="{% url 'marketing' %}"> Marketing Digital</a></h4>
+                            <p>Nous créons et pilotons vos campagnes publicitaires sur les réseaux sociaux Facebook, Instagram, Google, Snapchat et autres plateformes de social media afin de multiplier vos ventes en touchant de clients qualifiés.</p>
+                            <br><a href="{% url 'marketing' %}" class="btn-learn-more">En savoir plus...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Services Section -->
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+        <div class="container" data-aos="zoom-in">
+            <div class="row">
+                <div class="col-lg-9 text-center text-lg-left">
+                    <h3>Une équipe d’experts à votre disposition</h3>
+                    <p>Vous êtes salarié(e) ou possédez une entreprise qui a besoin de visibilité pour pérenniser et développer son activité ?</p>
+                </div>
+                <div class="col-lg-3 cta-btn-container text-center">
+                    <a class="cta-btn align-middle" href="{% url 'devis' %}">DEMANDER UN DEVIS</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Cta Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>Notre équipe</h2>
+                <p></p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="pic"><img src="{% static '/img/team/team-1.jpg' %}" class="img-fluid" alt="">
+                        </div>
+                        <div class="member-info">
+                            <h4>Lionel KIANGEBENI</h4>
+                            <span>Chief Executive Officer<br> C.E.O</span>
+                            <div class="social">
+                                <a target="_blank"href="https://github.com/lionellyon"><i class="ri-github-fill"></i></a>
+                                <a target="_blank"href="https://web.facebook.com/youngblack.man.39/"><i class="ri-facebook-fill"></i></a>
+                                <a target="_blank"href="https://www.linkedin.com/in/lionel-kiangebeni-3176931b6/"> <i class="ri-linkedin-box-fill"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="pic"><img src="{% static '/img/team/team-2.jpg' %}" class="img-fluid" alt="">
+                        </div>
+                        <div class="member-info">
+                            <h4>Elégance NZENGELE</h4>
+                            <span>Deputy Chief Executive Officer<br>Deputy C.E.O</span>
+                            <div class="social">
+                                <a href="https://www.facebook.com/euniceelegance.nzengele"><i class="ri-facebook-fill"></i></a>
+                                <a href="https://www.linkedin.com/in/elegance-nzengele-0aa9701a4"> <i class="ri-linkedin-box-fill"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4">
+                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="pic"><img src="{% static '/img/team/rb.jpeg' %}" class="img-fluid" alt="">
+                        </div>
+                        <div class="member-info">
+                            <h4>Leonardo RUBUZ</h4>
+                            <span>Chief Technical Officer<br> CTO</span>
+                            <div class="social">
+                                <a href="https://github.com/LeonardoRubuz"><i class="ri-github-fill"></i></a>
+                                <a href="https://www.facebook.com/profile.php?id=100008749359410"><i class="ri-facebook-fill"></i></a>
+                                <a href="https://www.linkedin.com/in/leonardo-rubuz-379bb1226"> <i class="ri-linkedin-box-fill"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4">
+                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="pic"><img src="{% static '/img/team/team-4.jpg' %}" class="img-fluid" alt="">
+                        </div>
+                        <div class="member-info">
+                            <h4>Eliel MUNGO</h4>
+                            <span>Chief Information Officer<br> C.I.O</span>
+                            <div class="social">
+                                <a href="https://www.facebook.com/Empereur512"><i class="ri-facebook-fill"></i></a>
+                                <a href="https://www.linkedin.com/in/eliel-mungo-a031ab198"> <i class="ri-linkedin-box-fill"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4">
+                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="pic"><img src="{% static '/img/team/team-5.jpg' %}" class="img-fluid" alt="">
+                        </div>
+                        <div class="member-info">
+                            <h4>Daniel JOY</h4>
+                            <span>Research and Development Director<br> R.D.D</span>
+                            <div class="social">
+                                <a href="https://github.com/Danieljucke"><i class="ri-github-fill"></i></a>
+                                <a href="https://www.linkedin.com/in/daniel-joy-a04629261"> <i class="ri-linkedin-box-fill"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4">
+                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="pic"><img src="{% static '/img/team/team-6.jpg' %}" class="img-fluid" alt="">
+                        </div>
+                        <div class="member-info">
+                            <h4>Christany ILUNGA</h4>
+                            <span>Chief Financial Officer<br> C.F.O</span>
+                            <div class="social">
+                                <a href="https://github.com/chrisilungachrisilunga"><i class="ri-github-fill"></i></a>
+                                <a href="https://www.facebook.com/christany.ilunga"><i class="ri-facebook-fill"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4">
+                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="pic"><img src="{% static '/img/team/team-7.jpg' %}" class="img-fluid" alt="">
+                        </div>
+                        <div class="member-info">
+                            <h4>Archange DUKI</h4>
+                            <span>Human Ressources Manager<br> H.R.M</span>
+                            <div class="social">
+                                <a href="https://github.com/archangedukis"><i class="ri-github-fill"></i></a>
+                                <a href="https://www.facebook.com/archange.dukis"><i class="ri-facebook-fill"></i></a>
+                                <a href="https://www.linkedin.com/in/archange-duki-004372264"> <i class="ri-linkedin-box-fill"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Team Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>Contact</h2>
+                <p>Vous aimeriez vous démarquer de la concurrence et profiter des meilleurs outils et stratégies du web ? Contactez nos experts par mail ou par appel, notre administration sera honorée d’examiner votre requête et vous répondre en un temps record.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 d-flex align-items-stretch">
+                    <div class="info">
+                        <div class="address">
+                            <i class="icofont-google-map"></i>
+                            <h4>Localisation:</h4>
+                            <p>11e Etage, Immeuble Jonya
+                                8884 Av. du Plateau, Commune de la Gombe
+                                Kinshasa, RDC
+                            </p>
+                        </div>
+                        <div class="email">
+                            <i class="icofont-envelope"></i>
+                            <h4>Email:</h4>
+                            <p>info@lyontech.com</p>
+                        </div>
+                        <div class="phone">
+                            <i class="icofont-phone"></i>
+                            <h4>Appel:</h4>
+                            <p>+243 831 157 924</p>
+                            <p>+243 972 369 183</p>
+                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d48.95127179164856!2d15.311180900000004!3d-4.3045725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x1a6a3399666258d7%3A0x3f74ac650b655c25!2sJONYA%20TOWER%20Q.Commerce%2C%208884%20Avenue%20du%20plateau%20.R%C3%A9f%3A%20Station%20Kobil%20derriere%20BCDC%20GOMBE!3m2!1d-4.3045725!2d15.3111809!5e1!3m2!1sfr!2scd!4v1678060630280!5m2!1sfr!2scd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+                    <form method='POST' class='email-form'>
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="name">Votre Nom</label>
+                                {{ form.author }}
+                                <div class="validate"></div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                <label for="name">Votre Email</label>
+                                {{ form.email }}
+                                <div class="validate"></div>
+                                </div>
+                                </div>
+                                <div class="form-group">
+                                <label for="name">Sujet</label>
+                                {{ form.subject }}
+                                <div class="validate"></div>
+                                </div>
+                                <div class="form-group">
+                                <label for="name">Message</label>
+                                {{ form.body }}
+                                <div class="validate"></div>
+                                </div>
+                            <input class='btn btn-primary' type="submit" value='Envoyer le message'>
+                        </div>
+                    </form>
+                    {% for message in messages %}
+                    <div class="alert alert-success">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact Section -->
+</main>
+<!-- End #main -->
+
+
+{% endblock main %}
+
+{% block newsletter %}
+{% endblock newsletter %}
+
+
+
+
+
+
+<!-- pdf JS
+<div class=''>
+        {{ form }}
+        <input class='btn btn-primary' type="submit" value='Envoyer le message'>
+    </div>
+		============================================ -->

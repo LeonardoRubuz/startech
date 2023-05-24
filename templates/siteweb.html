@@ -1,0 +1,226 @@
+<!-- Raikage The Third -->
+
+{% extends 'base_visitors.html' %}
+
+{% block title %}
+Création de sites web
+{% endblock title %}
+
+{% block main %}
+{% load static %}
+
+<main id="main">
+		<!-- ======= Breadcrumbs ======= -->
+		<section id="breadcrumbs" class="breadcrumbs">
+			<div class="container">
+				<ol>
+					<li><a href="{% url 'home' %}">Acceuil</a></li>
+					<li>Développement web</li>
+				</ol>
+				<h2>Développement web</h2>
+			</div>
+		</section>
+		<!-- End Breadcrumbs -->
+			<!-- ======= Why Us Section ======= -->
+		<section id="why-us" class="why-us section-bg" style='background-color: white;'>
+			<div class="container-fluid" data-aos="fade-up">
+				<div class="row">
+					<div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+						<div class="content">
+							<h3>Quelque que soit votre secteur d’activité, être visible sur le Net est indispensable pour augmenter votre capital communication. Les entreprises utilisent de plus en plus le Net comme vitrine, c’est un support privilégié pour communiquer sur son activité et toucher un public ciblé.
+							</h3><br>
+							<p>
+								Un site internet permet de véhiculer un maximum d’informations sur votre entreprise à moindre coût. Parmi les différents types de sites Internet existants vous trouverez forcément celui qui répondra à vos attentes, mais lequel choisir ?<br>
+								<strong>Quels sont vos objectifs sur le net ?</strong><br>
+								Il est primordial dans un premier temps de définir le ou les objectifs de votre présence sur Internet, ils peuvent être les suivants :
+							</p><br>
+						</div>
+						<div class="accordion-list">
+							<ul>
+								<li>
+									<a data-toggle="collapse" class="collapse" href="#accordion-list-1"><span>01</span> Etre visible <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+									<div id="accordion-list-1" class="collapse show" data-parent=".accordion-list">
+										<p>
+										Avoir un site internet bien référencé permet à votre entreprise d’être visible sur la toile auprès d’un public élargi, pouvant être ciblé selon votre secteur d’activité.
+										</p>
+									</div>
+								</li>
+								<li>
+									<a data-toggle="collapse" href="#accordion-list-2" class="collapsed"><span>02</span>Améliorer votre notoriété <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+									<div id="accordion-list-2" class="collapse" data-parent=".accordion-list">
+										<p>
+										Votre site internet vous permet de développer votre popularité, d’améliorer votre notoriété auprès des internautes.
+										</p>
+									</div>
+								</li>
+								<li>
+									<a data-toggle="collapse" href="#accordion-list-3" class="collapsed"><span>03</span>Développer votre base de données<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+									<div id="accordion-list-3" class="collapse" data-parent=".accordion-list">
+										<p>
+										Quelle aubaine pour vous ! Pouvoir développer une base de données de prospects rapidement et efficacement, grâce aux données que vous pouvez recueillir sur vos prospects, vos clients en analysant les fréquentations des pages, l’origine des visites… (Sources : Google Analytics).
+										</p>
+									</div>
+								</li>
+								<li>
+									<a data-toggle="collapse" href="#accordion-list-4" class="collapsed"><span>04</span>La vente en ligne <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+									<div id="accordion-list-4" class="collapse" data-parent=".accordion-list">
+										<p>
+										Effectivement, la création d’un site internet e-commerce peut représenter une belle opportunité pour commercialiser vos produits sans avoir forcément de point de vente physique ! Un site internet vous permet de mettre à disposition sur le Net de manière rapide et efficace un maximum d’informations à moindre coût, qu’elles soient de type commerciale, technique, informative…
+										</p>
+										<br><br>
+										<p>
+										Quelques différents types de sites internet que nous concevons !
+										</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("{% static "/img/why-us.png" %}");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
+					</div>
+				</div>
+		</section>
+		<!-- End Why Us Section -->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-5 align-items-stretch ">
+					<img src="{% static '/img/img1.png' %}" alt="" id="bans" class="img-fluid">
+				</div>
+				<div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+					<div class="content">
+						<h3><strong>Site vitrine</strong></h3>
+						<i class="bx bx-check-double"></i> Présente l'entreprise ou la marque ainsi que son activité. La forme est libre et ce type de site possède généralement une mise en forme originale.
+					</div>
+				</div>
+			</div>
+		</div><br><br>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-5 align-items-stretch ">
+					<img src="{% static '/img/img2.png' %}" alt="" id="bans" class="img-fluid">
+				</div>
+				<div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+					<div class="content">
+						<h3><strong>Site catalogue</strong></h3>
+						<i class="bx bx-check-double"></i> Présente l'entreprise ou la marque ainsi que son activité et tous ses produits détaillés.
+					</div>
+				</div>
+			</div>
+		</div><br><br>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-5 align-items-stretch ">
+					<img src="{% static '/img/img3.png' %}" alt="" id="bans" class="img-fluid">
+				</div>
+				<div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+					<div class="content">
+						<h3><strong>Site informatif</strong></h3>
+						<i class="bx bx-check-double"></i> Regroupe des données sur un sujet commun.
+					</div>
+				</div>
+			</div>
+		</div><br><br>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-5 align-items-stretch ">
+					<img src="{% static '/img/img4.png' %}" alt="" id="bans" class="img-fluid">
+				</div>
+				<div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+					<div class="content">
+						<h3><strong>Site marchand ou E-commerce</strong></h3>
+						<i class="bx bx-check-double"></i> Boutique en ligne dynamique avec une gestion des contenu et l’intégration d’un paiement sécurisé.
+					</div>
+				</div>
+			</div>
+		</div><br><br>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-5 align-items-stretch ">
+					<img src="{% static '/img/img5.png' %}" alt="" id="bans" class="img-fluid">
+				</div>
+				<div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+					<div class="content">
+						<h3><strong>Site institutionnel</strong></h3>
+						<i class="bx bx-check-double"></i> Décrit une organisation, ses activités et ses valeurs.
+						Le site institutionnel donne toutes les informations pratiques nécessaires à ses clients ou
+						à ses bénéficiaires. Il permet également de mettre en relation les acteurs économiques comme les collectivités et les associations.
+					</div>
+				</div>
+			</div>
+		</div><br><br>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-5 align-items-stretch ">
+					<img src="{% static '/img/img6.png' %}" alt="" id="bans" class="img-fluid">
+				</div>
+				<div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+					<div class="content">
+						<h3><strong>L’intranet</strong></h3>
+						<i class="bx bx-check-double"></i> Accessible uniquement par le personnel d'une même entreprise ou d'une direction, l’intranet met à disposition et partage des informations professionnelles.
+					</div>
+				</div>
+			</div>
+		</div><br><br>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-5 align-items-stretch ">
+					<img src="{% static '/img/img7.png' %}" alt="" id="bans" class="img-fluid">
+				</div>
+				<div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+					<div class="content">
+						<h3><strong>Mini-site - Jeux concours - événementiel</strong></h3>
+						<i class="bx bx-check-double"></i> Un  mini-site est rattaché à un site institutionnel ou à une marque et permet de créer une dynamique et faire la promotion d’un événement particulier.
+					</div>
+				</div>
+			</div>
+		</div><br><br>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-5 align-items-stretch ">
+					<img src="{% static '/img/img8.png' %}" alt="" id="bans" class="img-fluid">
+				</div>
+				<div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+					<div class="content">
+						<h3><strong>Application Web</strong></h3>
+						<i class="bx bx-check-double"></i> Une application web est un programme s’exécutant directement dans un navigateur web.
+						Consultable en ligne, il n’est pas nécessaire d’installer un logiciel sur votre ordinateur, pour accéder à l’application 
+						il faut cependant avoir une connexion à Internet (plusieurs applications proposées sur Chrome Web Store ou Marketplace de Mozilla).
+						Une application web peut être un jeu, un logiciel de traitement de contacts, un fil d'actualités, un moteur de recherche, un système de gestion des contenus, etc.
+					</div>
+				</div>
+			</div>
+		</div><br><br>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-12 d-flex flex-column justify-content-center align-items-stretch">
+					<div class="content">
+						<p>
+						Nous réaliserons votre projet web du début jusqu’à la fin. Notre équipe reste à votre disposition pour écouter vos besoins et vous aider à atteindre vos objectifs. Si vous avez des questions, n'hésiter pas à nous appeler.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main><!-- End #main -->
+
+{% endblock main %}
+
+
+
+{% block newsletter %}
+{% for message in messages  %}
+
+<div class="alert alert-success">
+	{{ message }}
+</div>
+
+{% endfor %}
+<h4>Rejoignez notre newsletter</h4>
+<p>Entrez votre adresse e-mail et soyez le premier à être informé de nos événements, nos offres spéciales ou des sujets concernant notre entreprise et ses membres.</p>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ subscriber }}
+    <input type="submit" value="S'abonner">
+</form>
+{% endblock newsletter %}

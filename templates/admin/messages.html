@@ -1,0 +1,117 @@
+<!-- Raikage The Third -->
+
+{% extends "admin/base_admin.html" %}
+
+
+{% block title %}
+Messages des visiteurs
+{% endblock title %}
+
+{% block search %}
+<form method='GET' action='{% url "messages" %}'>
+    <input type="text" name='q' class="form-control" placeholder="Rechercher un message...">
+ </form>
+{% endblock search %}
+
+{% block content %}
+{% load static %}
+
+<div class="content container-fluid">
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">Messages de visiteurs</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Tableau de bord</a></li>
+                    <li class="breadcrumb-item active">Tous les messages</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card card-table">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-center mb-0 datatable">
+                            <thead>
+                                <tr>
+                                    <th>N°</th>
+                                    <th>Auteur</th>
+                                    <th>Addresse mail</th>
+                                    <th>Sujet</th>
+                                    <th class="text-right">Abonné</th>
+                                    <th class="text-right">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                {% for item in msgs %}
+                                
+                                    <tr>
+                                        <td>{{ item.id }}</td>
+                                        <td>
+                                            <h2>
+                                            <a>{{ item.author }}</a>
+                                            </h2>
+                                        </td>
+                                        <td>{{ item.email }}</td>
+                                        <td>{{ item.subject }}</td>
+                                        <td class='text-right'>
+                                            {% if item.email in subs %}
+                                                <span class="badge badge-success">Oui</span>
+                                            {% else %}
+                                                <span class="badge badge-danger">Non</span>
+                                            {% endif %}
+                                        </td>
+                                        <td class="text-right">
+                                            <div class="actions">
+                                                <a href="{% url 'message_detail' item.pk %}" class="btn btn-info">
+                                                    <i class="fas fa-eye"></i>
+                                                </a>
+                                                <a href="{% url 'message_answer' item.pk %}" class="btn btn-primary">
+                                                    <i class="fas fa-pen"></i>
+                                                </a>
+                                                <a href="{% url 'message_delete' item.pk %}" class="btn btn-danger">
+                                                    <i class="fas fa-trash"></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <ul class="pagination">
+                {% if msgs.has_previous %}
+                    <li class="page-item ">
+                        <a class="page-link" href="?page={{ msgs.previous_page_number }}" tabindex="-1">Précedent</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="?page=1">1</a>
+                    </li>
+                {% endif %}
+                <li class="page-item active">
+                    <a class="page-link" href="#">{{ msgs.number }} <span class="sr-only">(current)</span></a>
+                </li>
+                {% if msgs.has_next %}
+                    <li class="page-item"><a class="page-link" href="?page={{ msgs.next_page_number }}">{{ msgs.next_page_number }}</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ msgs.next_page_number }}">Suivant</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ msgs.paginator.num_pages }}">Dernière page</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

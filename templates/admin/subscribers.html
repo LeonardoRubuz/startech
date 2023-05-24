@@ -1,0 +1,101 @@
+<!-- Raikage The Third -->
+
+{% extends "admin/base_admin.html" %}
+
+
+{% block title %}
+Abonnés
+{% endblock title %}
+
+{% block content %}
+{% load static %}
+
+<div class="content container-fluid">
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">Abonnés à la newsletter</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Tableau de bord</a></li>
+                    <li class="breadcrumb-item active">Tous les abonnés</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card card-table">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-center mb-0 datatable">
+                            <thead>
+                                <tr>
+                                    <th>N°</th>
+                                    <th>Addresse mail</th>
+                                    <th class="text-right">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in subscribers %}
+                                    <tr>
+                                        <td>{{ item.id }}</td>
+                                        <td>{{ item.email }}</td>
+                                        <td class="text-right">
+                                            <div class="actions">
+                                                <a href="{% url 'send_message' item.pk %}" class="btn btn-primary">
+                                                    <i class="fas fa-pen"></i>
+                                                </a>
+                                                <a href="{% url 'subscriber_delete' item.pk %}" class="btn btn-danger">
+                                                    <i class="fas fa-trash"></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <ul class="pagination">
+                {% if subscribers.has_previous %}
+                    <li class="page-item ">
+                        <a class="page-link" href="?page={{ subscribers.previous_page_number }}" tabindex="-1">Précedent</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="?page=1">1</a>
+                    </li>
+                {% endif %}
+                <li class="page-item active">
+                    <a class="page-link" href="#">{{ subscribers.number }} <span class="sr-only">(current)</span></a>
+                </li>
+                {% if subscribers.has_next %}
+                    <li class="page-item"><a class="page-link" href="?page={{ subscribers.next_page_number }}">{{ subscribers.next_page_number }}</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ subscribers.next_page_number }}">Suivant</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ subscribers.paginator.num_pages }}">Dernière page</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-12 d-flex">
+            {% for message in messages %}
+                <div class="alert alert-success">
+                    {{ message }}
+                </div>
+            {% endfor %}
+            
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

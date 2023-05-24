@@ -1,0 +1,214 @@
+<!-- Raikage The Third -->
+
+{% extends 'base_visitors.html' %}
+
+{% block title %}
+Marketing Digital
+{% endblock title %}
+
+{% block main %}
+{% load static %}
+
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li><a href="{% url 'home' %}">Acceuil</a></li>
+                <li>Marketing Digital</li>
+            </ol>
+            <h2>Marketing Digital</h2>
+        </div>
+    </section>
+    <!-- End Breadcrumbs -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us section-bg" style='background-color: white;'>
+        <div class="container-fluid" data-aos="fade-up">
+            <div class="row">
+                <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+                    <div class="content">
+                        <h3>Le marketing digital couvre l'ensemble des activités marketing déployées en ligne pour entrer en relation avec des clients ou prospects, telles que par exemple la tenue d'un site web ou blog, les réseaux sociaux, ou la publicité digitale.
+                        </h3><br>
+                        <p>
+                        Le marketing digital englobe un large éventail de services et d'outils pour aider les entreprises à promouvoir leurs produits ou services en ligne.
+                        <br>
+                        </p><br>
+                    </div>
+                    <div class="accordion-list">
+                        <ul>
+                            <li>
+                                <a data-toggle="collapse" class="collapse" href="#accordion-list-1"><span>01</span>Les 4 principes du marketing  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-1" class="collapse show" data-parent=".accordion-list">
+                                    <p>
+                                    La politique de produit (product), la politique de prix (price), la politique de distribution (place) et la politique de communication (promotion).
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a data-toggle="collapse" href="#accordion-list-2" class="collapsed"><span>02</span> Les 10 P du marketing   <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-2" class="collapse" data-parent=".accordion-list">
+                                    <p>
+                                    Ils font référence aux différents éléments qui permettent de définir une stratégie marketing cohérente : Produit, Prix, Politique de distribution, Communication, Processus, Personnel, Partenariat, Preuve, Permission et la vache Pourpre qui aborde la nécessité d'innover.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a data-toggle="collapse" href="#accordion-list-3" class="collapsed"><span>03</span>Pourquoi faire du marketing ? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-3" class="collapse" data-parent=".accordion-list">
+                                    <p>
+                                    Le marketing est le secteur d'activité idéal pour mettre à profit vos qualités relationnelles, et offre de nombreuses possibilités d'exprimer vos talents de communicant. Bien connaître les individus et ce qui les fait vibrer est indispensable pour élaborer une stratégie et des campagnes marketing.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a data-toggle="collapse" href="#accordion-list-3" class="collapsed"><span>04</span>Quelle est l'importance du marketing digital ?  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-3" class="collapse" data-parent=".accordion-list">
+                                    <p>
+                                    Le marketing digital permet à votre marque de toucher un public plus large et d'établir une relation plus forte avec les clients. Il facilite également le suivi des résultats de vos campagnes de marketing. Grâce à l'analyse des données, vous pouvez adapter vos campagnes pour atteindre le résultat souhaité.
+                                    </p>
+                                    <br><br>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("{% static "/img/why-us.png" %}");' data-aos="zoom-in" data-aos-delay="150">&nbsp;
+                </div>
+            </div>
+        </div>
+    </section><!-- End Why Us Section -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-5 align-items-stretch ">
+                <img src="{% static '/img/mark1.png' %}" alt="" id="bans" class="img-fluid">
+            </div>
+            <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+                <div class="content">
+                    <h3><strong> Référencement (SEO)</strong></h3>
+                    <i class="bx bx-check-double"></i>Optimiser un site web pour les moteurs de recherche, afin d'améliorer son classement dans les résultats de recherche.
+                </div>
+            </div>
+        </div>
+    </div><br><br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-5 align-items-stretch ">
+                <img src="{% static '/img/mark2.png' %}" alt="" id="bans" class="img-fluid">
+            </div>
+            <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+                <div class="content">
+                    <h3><strong> Publicité en ligne (SEA)</strong></h3>
+                    <i class="bx bx-check-double"></i>Acheter des annonces publicitaires sur les moteurs de recherche ou les réseaux sociaux pour atteindre des clients potentiels.
+                </div>
+            </div>
+        </div>
+    </div><br><br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-5 align-items-stretch ">
+                <img src="{% static '/img/mark3.jpg' %}" alt="" id="bans" class="img-fluid">
+            </div>
+            <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+                <div class="content">
+                    <h3><strong>Marketing de contenu</strong></h3>
+                    <i class="bx bx-check-double"></i>créer et diffuser du contenu pertinent et utile pour attirer des visiteurs sur un site web et améliorer la notoriété de la marque.
+                </div>
+            </div>
+        </div>
+    </div><br><br>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-5 align-items-stretch ">
+                    <img src="{% static '/img/mark4.png' %}" alt="" id="bans" class="img-fluid">
+                </div>
+                <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+                    <div class="content">
+                        <h3><strong>Email marketing</strong></h3>
+                        <i class="bx bx-check-double"></i>Envoyer des messages ciblés aux clients et aux prospects par email, pour promouvoir des offres spéciales, des événements ou des nouveautés.
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-5 align-items-stretch ">
+                    <img src="{% static '/img/mark5.png' %}" alt="" id="bans" class="img-fluid">
+                </div>
+                <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+                    <div class="content">
+                        <h3><strong>Réseaux sociaux</strong></h3>
+                        <i class="bx bx-check-double"></i>Utiliser les réseaux sociaux pour engager les clients, promouvoir la marque, et générer du trafic vers un site web.
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-5 align-items-stretch ">
+                    <img src="{% static '/img/mark6.png' %}" alt="" id="bans" class="img-fluid">
+                </div>
+                <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+                    <div class="content">
+                        <h3><strong>Analyse de données</strong></h3>
+                        <i class="bx bx-check-double"></i> Mesurer et analyser les données de comportement des clients pour améliorer l'efficacité des campagnes de marketing en ligne.
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-5 align-items-stretch ">
+                    <img src="{% static '/img/mark7.png' %}" alt="" id="bans" class="img-fluid">
+                </div>
+                <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+                    <div class="content">
+                        <h3><strong>Marketing d'influence</strong></h3>
+                        <i class="bx bx-check-double"></i>Collaborer avec des influenceurs en ligne pour promouvoir des produits ou services auprès de leur audience.
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-5 align-items-stretch ">
+                    <img src="{% static '/img/mark8.avif' %}" alt="" id="bans" class="img-fluid">
+                </div>
+                <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+                    <div class="content">
+                        <h3><strong>Marketing mobile</strong></h3>
+                        <i class="bx bx-check-double"></i>Promouvoir des produits ou services via des applications mobiles ou des publicités ciblées sur les appareils mobiles.
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+        <div class="col-lg-12 d-flex flex-column justify-content-center align-items-stretch">
+            <div class="content">
+                <p>
+                Ces services peuvent être utilisés ensemble ou séparément pour créer une stratégie de marketing digital efficace pour votre entreprise.<br>
+                Nous réaliserons votre projet du début jusqu’à la fin. Notre équipe reste à votre disposition pour écouter vos besoins et vous aider à atteindre vos objectifs. Si vous avez des questions, n'hésiter pas à nous appeler.
+                </p>
+            </div>
+        </div>
+    </main><!-- End #main -->
+
+{% endblock main %}
+
+
+{% block newsletter %}
+{% for message in messages  %}
+
+<div class="alert alert-success">
+    {{ message }}
+</div>
+
+{% endfor %}
+<h4>Rejoignez notre newsletter</h4>
+<p>Entrez votre adresse e-mail et soyez le premier à être informé de nos événements, nos offres spéciales ou des sujets concernant notre entreprise et ses membres.</p>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ subscriber }}
+    <input type="submit" value="S'abonner">
+</form>
+{% endblock newsletter %}
