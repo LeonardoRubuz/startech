@@ -1,4 +1,4 @@
-# Raikage The Third
+# Raikage The Third ehe
 
 from django.contrib import admin
 from .models import *
