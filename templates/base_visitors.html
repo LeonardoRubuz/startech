@@ -37,8 +37,15 @@
 
     <body>
 <!-- Page loader -->
+        <div id="preloader">
+            <div class="display-table">
+                <div class="display-tablecell">
+                    <img src='{% static "img/loader.gif" %}' alt="">
+                </div>
+            </div>
+        </div>
 <!-- ======= Header ======= -->
-        <header id="header" class="fixed-top ">
+        <header id="header" class="fixed-top header-inner-pages">
             <div class="container d-flex align-items-center">
                 <h1 class="logo mr-auto"><a href="{% url 'home' %}">Lyon Technology</a></h1>
                 <nav class="nav-menu d-none d-lg-block">
