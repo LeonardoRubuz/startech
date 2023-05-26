@@ -91,11 +91,58 @@
                 <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
 
                     <!-- ======= Inclure le formulaire ici  ======= -->
-                    <form method='POST' enctype='multipart/form-data'>
+                    <form method='POST' enctype='multipart/form-data' class="email-form">
                         {% csrf_token %}
                         <div class='form-group'>
-                            {{ form }}
-                            <input class='btn btn-primary' type="submit" value='Envoyer le devis'>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="">Votre nom</label>
+                                    {{ form.name }}
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="">Votre adresse mail</label>
+                                    {{ form.email }}
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="">De quel service avez-vous besoin?</label>
+                                    {{ form.required_service }}
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="">Votre numéro de téléphone</label>
+                                    {{ form.phone }}
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="">Délai de livraison</label>
+                                    {{ form.delivery_delay }}
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="">Quel est votre budget? (en USD)</label>
+                                    {{ form.budget }}
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="">Modalité de paiement</label>
+                                    {{ form.payment_mode }}
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="">Votre cahier de charges(.docx/.pdf)</label>
+                                    {{ form.file }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Décrivez votre projet</label>
+                                {{ form.description }}
+                            </div>
+                            <div class="mb-3">
+                                <div class="text-center">
+                                    <button type="submit">Envoyer le devis</button>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
