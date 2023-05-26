@@ -41,8 +41,13 @@ def loginpage(request):
                     return redirect('dashboard')
                 else:
                     return HttpResponse('Compte désactivé')
-            else:
-                return HttpResponse('Informations non valides')
+            else:        
+                form = LoginForm()
+                context = {
+                    'form' : form,
+                }
+                messages.error(request, "Informations invalides")
+                return render(request, 'admin/login.html', context)
     else:
         form = LoginForm()
         context = {
