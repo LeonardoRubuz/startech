@@ -43,7 +43,7 @@ class Estimate(models.Model):
 
 
 class Subscriber(models.Model):
-    email = models.EmailField(max_length=50)  #Supprimer ce commentaire après l'ajout de la contrainte d'unicité
+    email = models.EmailField(max_length=50, unique=True)  #Supprimer ce commentaire après l'ajout de la contrainte d'unicité
     date = models.DateTimeField(auto_now=True)
 
     def __str__(self) -> str:
