@@ -2,7 +2,7 @@
 
 from django import forms
 from django.contrib.auth.models import User
-from .models import Profile, Publication
+from .models import Profile, Publication, Command
 
 
 class LoginForm(forms.Form):
@@ -109,4 +109,7 @@ class AnswerMessageForm(forms.Form):
         self.fields['body'].widget.attrs.update({'class' : 'form-control'})
 
 
-
+class CommandForm(forms.Form):
+    class Meta:
+        model = Command
+        fields = '__all__'
