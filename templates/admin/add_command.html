@@ -1,0 +1,196 @@
+<!-- Raikage The Third -->
+
+{% extends "admin/base_admin.html" %}
+
+{% block title %}
+Ajout d'un profil
+{% endblock title %}
+
+
+{% block content %}
+<div class='content container-fluid'>
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">Ajouter un profil</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'dashboard' %}">Tableau de bord</a></li>
+                    <li class="breadcrumb-item active">Ajout d'un profil</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-12 d-flex">
+            <div class="card flex-fill">
+                <div class="card-header">
+                    <h5 class="card-title"></h5>
+                    {% for message in messages  %}
+                        <div class="alert alert-success">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="card-body">
+                    <form action="" method='POST'>
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <div class="form-group">
+                                <div class="row col-lg-12">Client</div>
+                                <div class="form-row">
+                                    <div class="col-md-4 form-group">
+                                        <label for="">Identité</label>
+                                        {{ form. }}
+                                    </div>
+                                    <div class="col-md-4 form-group">
+                                        <label for="">Address</label>
+                                        {{ form. }}
+                                    </div>
+                                    <div class="col-md-4 form-group">
+                                        <label for="">Paiement</label>
+                                        {{ form. }}
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6 form-group">
+                                        <label for="">Téléphone</label>
+                                        {{ form. }}
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="">Addresse électronique</label>
+                                        {{ form. }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row col-lg-12">Site</div>
+                                <div class="form-row">
+                                    <div class="col-md-6 form-group">
+                                        <label for="">Type de site</label>
+                                        {{ form. }}
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="">Catégorie</label>
+                                        {{ form. }}
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6 form-group">
+                                        <label for="">Quantité</label>
+                                        {{ form. }}
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="">Coût</label>
+                                        {{ form. }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row col-lg-12">Base de données</div>
+                                <div class="form-row">
+                                    <div class="col-md-6 form-group">
+                                        <label for="">Création</label>
+                                        {{ form. }}
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="">Catégorie</label>
+                                        {{ form. }}
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6 form-group">
+                                        <label for="">Quantité</label>
+                                        {{ form. }}
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="">Coût</label>
+                                        {{ form. }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row col-lg-12">Nom de domaine</div>
+                                <div class="form-row">
+                                    <div class="col-md-6 form-group">
+                                        <label for="">Achat</label>
+                                        {{ form. }}
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="">Extension</label>
+                                        {{ form. }}
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6 form-group">
+                                        <label for="">Quantité</label>
+                                        {{ form. }}
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="">Coût</label>
+                                        {{ form. }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row col-lg-12">Hébergement</div>
+                                <div class="form-row">
+                                    <div class="col-md-6 form-group">
+                                        <label for="">Achat</label>
+                                        {{ form. }}
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="">Type</label>
+                                        {{ form. }}
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-4 form-group">
+                                        <label for="">Durée</label>
+                                        {{ form. }}
+                                    </div>
+                                    <div class="col-md-4 form-group">
+                                        <label for="">Quantité</label>
+                                        {{ form. }}
+                                    </div>
+                                    <div class="col-md-4 form-group">
+                                        <label for="">Coût</label>
+                                        {{ form. }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row col-lg-12">Maintenance</div>
+                                <div class="form-row">
+                                    <div class="col-md-6 form-group">
+                                        <label for="">Abonnement</label>
+                                        {{ form. }}
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="">Catégorie</label>
+                                        {{ form. }}
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6 form-group">
+                                        <label for="">Quantité</label>
+                                        {{ form. }}
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="">Coût</label>
+                                        {{ form. }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <button type="submit">Génerer le dévis</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class='card-footer'>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
