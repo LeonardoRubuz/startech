@@ -3460,3 +3460,12 @@ table.table-inbox tbody tr.checked {
 		height: 355px;
 	}
 }
+
+.titre-formulaire{
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.formulaire-commande{
+	background-color:(105, 105, 105, 0.5);
+}

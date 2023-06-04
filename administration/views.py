@@ -385,7 +385,6 @@ def devis_detail(request, pk):
     }
     return render(request, 'admin/devis_detail.html', context)
 
-
 # Page supprimer un devis
 @login_required(login_url='login')
 def devis_delete(request, pk):
@@ -520,3 +519,23 @@ def publish_message(request, pk):
     )
     email.send(fail_silently=False)
     return redirect('publications')
+
+# Page de génération de devis
+@login_required(login_url='login')
+def make_invoice(request):
+    if request.method == 'POST':
+        form = CommandForm(request.POST)
+        if form.is_valid():
+            identity = form.cleaned_data['customer_identity']
+            form.save()
+            obj = Command.objects.get(identity=identity)
+            messages.success(request, 'Devis généré!')
+            return redirect('invoice')
+        # Insérer la fonction de PDF ici
+        
+    else:
+        form = CommandForm()
+        context = {
+            'form': form
+        }
+    return render(request, 'admin/add_command.html', context)

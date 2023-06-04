@@ -109,7 +109,8 @@ class AnswerMessageForm(forms.Form):
         self.fields['body'].widget.attrs.update({'class' : 'form-control'})
 
 
-class CommandForm(forms.Form):
+class CommandForm(forms.ModelForm):
+    
     class Meta:
         model = Command
         fields = '__all__'
@@ -140,4 +141,5 @@ class CommandForm(forms.Form):
         self.fields['hosting_cost'].widget.attrs.update({'class': 'form-control',})
         self.fields['maintenance_cost'].widget.attrs.update({'class': 'form-control',})
         self.fields['domain_extension'].widget.attrs.update({'class': 'form-control',})
+        self.fields['domain_period'].widget.attrs.update({'class': 'form-control',})
         self.fields['hosting_period'].widget.attrs.update({'class': 'form-control',})

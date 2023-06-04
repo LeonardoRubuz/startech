@@ -32,157 +32,161 @@ Ajout d'un profil
                     {% endfor %}
                 </div>
                 <div class="card-body">
-                    <form action="" method='POST'>
+                    <form action="" method='POST' class='formulaire-commande'>
                         {% csrf_token %}
                         <div class="form-group">
                             <div class="form-group">
-                                <div class="row col-lg-12">Client</div>
+                                <div class="row col-lg-12 titre-formulaire">------Client------</div><br>
                                 <div class="form-row">
                                     <div class="col-md-4 form-group">
                                         <label for="">Identité</label>
-                                        {{ form. }}
+                                        {{ form.customer_identity }}
                                     </div>
                                     <div class="col-md-4 form-group">
-                                        <label for="">Address</label>
-                                        {{ form. }}
+                                        <label for="">Addresse</label>
+                                        {{ form.address }}
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <label for="">Paiement</label>
-                                        {{ form. }}
+                                        {{ form.payment_mode }}
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="col-md-6 form-group">
                                         <label for="">Téléphone</label>
-                                        {{ form. }}
+                                        {{ form.phone }}
                                     </div>
                                     <div class="col-md-6 form-group">
                                         <label for="">Addresse électronique</label>
-                                        {{ form. }}
+                                        {{ form.email }}
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="row col-lg-12">Site</div>
+                                <div class="row col-lg-12 titre-formulaire">------Site------</div><br>
                                 <div class="form-row">
                                     <div class="col-md-6 form-group">
                                         <label for="">Type de site</label>
-                                        {{ form. }}
+                                        {{ form.site_type }}
                                     </div>
                                     <div class="col-md-6 form-group">
                                         <label for="">Catégorie</label>
-                                        {{ form. }}
+                                        {{ form.site_category }}
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="col-md-6 form-group">
                                         <label for="">Quantité</label>
-                                        {{ form. }}
+                                        {{ form.site_quantity }}
                                     </div>
                                     <div class="col-md-6 form-group">
                                         <label for="">Coût</label>
-                                        {{ form. }}
+                                        {{ form.site_cost }}
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="row col-lg-12">Base de données</div>
+                                <div class="row col-lg-12 titre-formulaire">-----Base de données-----</div><br>
                                 <div class="form-row">
                                     <div class="col-md-6 form-group">
                                         <label for="">Création</label>
-                                        {{ form. }}
+                                        {{ form.db_exist }}
                                     </div>
                                     <div class="col-md-6 form-group">
                                         <label for="">Catégorie</label>
-                                        {{ form. }}
+                                        {{ form.db_category }}
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="col-md-6 form-group">
                                         <label for="">Quantité</label>
-                                        {{ form. }}
+                                        {{ form.db_quantity }}
                                     </div>
                                     <div class="col-md-6 form-group">
                                         <label for="">Coût</label>
-                                        {{ form. }}
+                                        {{ form.db_cost }}
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="row col-lg-12">Nom de domaine</div>
+                                <div class="row col-lg-12 titre-formulaire">------Nom de domaine----</div><br>
                                 <div class="form-row">
                                     <div class="col-md-6 form-group">
                                         <label for="">Achat</label>
-                                        {{ form. }}
+                                        {{ form.domain_exist }}
                                     </div>
                                     <div class="col-md-6 form-group">
                                         <label for="">Extension</label>
-                                        {{ form. }}
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="col-md-6 form-group">
-                                        <label for="">Quantité</label>
-                                        {{ form. }}
-                                    </div>
-                                    <div class="col-md-6 form-group">
-                                        <label for="">Coût</label>
-                                        {{ form. }}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="row col-lg-12">Hébergement</div>
-                                <div class="form-row">
-                                    <div class="col-md-6 form-group">
-                                        <label for="">Achat</label>
-                                        {{ form. }}
-                                    </div>
-                                    <div class="col-md-6 form-group">
-                                        <label for="">Type</label>
-                                        {{ form. }}
+                                        {{ form.domain_extension }}
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="col-md-4 form-group">
                                         <label for="">Durée</label>
-                                        {{ form. }}
+                                        {{ form.domain_period }}
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <label for="">Quantité</label>
-                                        {{ form. }}
+                                        {{ form.domain_quantity }}
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <label for="">Coût</label>
-                                        {{ form. }}
+                                        {{ form.domain_cost }}
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="row col-lg-12">Maintenance</div>
+                                <div class="row col-lg-12 titre-formulaire">------Hébergement------</div><br>
+                                <div class="form-row">
+                                    <div class="col-md-6 form-group">
+                                        <label for="">Achat</label>
+                                        {{ form.hosting_exist }}
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="">Type</label>
+                                        {{ form.hosting_type }}
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-4 form-group">
+                                        <label for="">Durée</label>
+                                        {{ form.hosting_period }}
+                                    </div>
+                                    <div class="col-md-4 form-group">
+                                        <label for="">Quantité</label>
+                                        {{ form.hosting_quantity }}
+                                    </div>
+                                    <div class="col-md-4 form-group">
+                                        <label for="">Coût</label>
+                                        {{ form.hosting_cost }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group"> 
+                                <div class="row col-lg-12 titre-formulaire">-----Maintenance-----</div><br>
                                 <div class="form-row">
                                     <div class="col-md-6 form-group">
                                         <label for="">Abonnement</label>
-                                        {{ form. }}
+                                        {{ form.maintenance_exist }}
                                     </div>
                                     <div class="col-md-6 form-group">
                                         <label for="">Catégorie</label>
-                                        {{ form. }}
+                                        {{ form.maintenance_category }}
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="col-md-6 form-group">
                                         <label for="">Quantité</label>
-                                        {{ form. }}
+                                        {{ form.maintenance_quantity }}
                                     </div>
                                     <div class="col-md-6 form-group">
                                         <label for="">Coût</label>
-                                        {{ form. }}
+                                        {{ form.maintenance_cost }}
                                     </div>
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <button type="submit">Génerer le dévis</button>
+                                <button type="submit" class='btn btn-primary'>Génerer le dévis</button>
                             </div>
                         </div>
                     </form>

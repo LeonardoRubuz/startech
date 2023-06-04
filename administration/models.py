@@ -59,7 +59,11 @@ class Command(models.Model):
         ('Avancée','Avancéé')
 
     )
-    DOMAIN_EXTENSIONS = ()
+    DOMAIN_EXTENSIONS = (
+        ('.com','.com'),
+        ('.org','.org'),
+        ('.cd','.cd')
+    )
     HOSTING_CATEGORIES = (
         ('Simple','Simple'),
         ('Mutualisé','Mutualisé'),
@@ -72,38 +76,59 @@ class Command(models.Model):
         ('Trimestrielle','Trimestrielle'),
         ('Semestrielle','Semestrielle')
     )
+    HOSTING_PERIODS = (
+        ('5 ans','5 ans'),
+        ('2 ans','2 ans'),
+        ('1 an','1 an'),
+        ('6 mois','6 mois'),
+        ('3 mois','3 mois'),
+        ('1 mois','1 mois'),
+    )
+    SITE_CATEGORIES=(
+        ('Simple','Simple'),
+        ('Intermédiaire','Intermédiaire'),
+        ('Avancé','Avancé')
+    )
+    DOMAIN_PERIODS = (
+        ('5 ans','5 ans'),
+        ('4 ans','4 ans'),
+        ('3 ans','3 ans'),
+        ('2 ans','2 ans'),
+        ('1 an','1 an')
+    )
 
     ## Informations propres au client
     customer_identity = models.CharField(max_length=25, null=False)
     address = models.CharField(max_length=50, null=False)
     email = models.EmailField(max_length=254, null=False)
     phone = models.CharField(max_length=15, null=False)
-    payment_mode = models.CharField(max_length=50, null=False)
+    payment_mode = models.CharField(max_length=50, null=False, choices=PAYMENT_MODES)
     ## Informations de la commande
     # Type de site
     site_type = models.CharField( max_length=50, null=False, choices=SITE_TYPES)
-    site_category = models.CharField( max_length=50, null=False)
-    site_quantity = models.IntegerField(null=False)
+    site_category = models.CharField( max_length=50, null=False, choices=SITE_CATEGORIES)
+    site_quantity = models.PositiveSmallIntegerField(null=False)
     site_cost = models.FloatField(null=False)
     # Base de données
     db_exist = models.BooleanField(default=False, blank=True, null=True)
     db_category = models.CharField(max_length=50, null=True, choices=DATABASE_CATEGORIES)
-    db_quantity = models.IntegerField(null=True)
+    db_quantity = models.PositiveSmallIntegerField(null=True)
     db_cost = models.FloatField(null=True)
     # Nom de domaine
     domain_exist = models.BooleanField(default=False, null=True)
     domain_extension = models.CharField(max_length=50, null=True, choices=DOMAIN_EXTENSIONS)
-    domain_quantity = models.IntegerField(null=True)
+    domain_period = models.CharField(max_length=50,null=True, choices=DOMAIN_PERIODS)
+    domain_quantity = models.PositiveSmallIntegerField(null=True)
     domain_cost = models.FloatField(null=True)
     # Hébergement
     hosting_exist = models.BooleanField(default=False, null=True)
     hosting_type = models.CharField(max_length=50, null=True, choices=HOSTING_CATEGORIES)
-    hosting_period = models.IntegerField(null=True)
-    hosting_quantity = models.IntegerField(null=True)
+    hosting_period = models.CharField(max_length=50,null=True, choices=HOSTING_PERIODS)
+    hosting_quantity = models.PositiveSmallIntegerField(null=True)
     hosting_cost = models.FloatField(null=True)
     
     # Maintenance
     maintenance_exist = models.BooleanField(default=False, null=True)
-    maintenace_category = models.CharField(null=True, max_length=50, choices=MAINTENANCE_CATEGORIES)
-    maintenance_quantity = models.IntegerField(null=True)
+    maintenance_category = models.CharField(null=True, max_length=50, choices=MAINTENANCE_CATEGORIES)
+    maintenance_quantity = models.PositiveSmallIntegerField(null=True)
     maintenance_cost = models.FloatField(null=True)

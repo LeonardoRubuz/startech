@@ -4,7 +4,7 @@ from django.urls import path
 
 from .views import *
 
-urlpatterns =[
+urlpatterns = [
     # Route vers la page de connexion et les pages de types "Utilisateurs"
     path('login/', loginpage ,name="login"),
     path('logout/', logoutUser ,name="logout"),
@@ -46,6 +46,9 @@ urlpatterns =[
     path('dashboard/publish/<int:pk>', publish_message ,name="publish"),
 
     # Page de résultats de recherche générale
-    path('dashboard/search-results', dashboard, name='results')
+    path('dashboard/search-results', dashboard, name='results'),
+
+    # Commandes et génération de devis
+    path('dashboard/generate', make_invoice, name='invoice')
 
 ]
