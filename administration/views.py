@@ -11,7 +11,7 @@ from visiteurs.models import *
 from django.core.paginator import Paginator
 from django.contrib import messages
 from django.core.mail import EmailMessage
-from personalClasses import random_phrases
+from personalClasses import random_phrases, generation
 from django_pandas.io import read_frame
 from django.db.models import Q
 
@@ -528,11 +528,10 @@ def make_invoice(request):
         if form.is_valid():
             identity = form.cleaned_data['customer_identity']
             form.save()
-            obj = Command.objects.get(identity=identity)
             messages.success(request, 'Devis généré!')
             return redirect('invoice')
         # Insérer la fonction de PDF ici
-        
+
     else:
         form = CommandForm()
         context = {
