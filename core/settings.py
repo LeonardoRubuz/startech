@@ -149,3 +149,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # Iframe 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
+# Cookies
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+
