@@ -37,9 +37,13 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
+    
+    # Third party
     'whitenoise.runserver_nostatic',
     "django.contrib.staticfiles",
-    
+    "corsheaders",
+
+    # Local
     "visiteurs.apps.VisiteursConfig",
     "administration.apps.AdministrationConfig"
 ]
@@ -53,6 +57,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+
+    "corsheaders.middleware.CorsMiddleware"
 ]
 
 ROOT_URLCONF = "core.urls"
@@ -153,4 +159,9 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
 SECURE_SSL_REDIRECT  = True
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://star-techgroup.com",
+    "https://*.star-techgroup.com"
+]
 
