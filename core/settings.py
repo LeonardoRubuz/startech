@@ -24,9 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-@5o*l-0s7^21-q0f8r^bpe+a4r8!r+l@ar*0gnzeos+br^7##@"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
-ALLOWED_HOSTS = ['127.0.0.1']
+DEBUG = True
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -41,7 +40,7 @@ INSTALLED_APPS = [
     # Third party
     'whitenoise.runserver_nostatic',
     "django.contrib.staticfiles",
-    "corsheaders",
+    #"corsheaders",
 
     # Local
     "visiteurs.apps.VisiteursConfig",
@@ -58,7 +57,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 
-    "corsheaders.middleware.CorsMiddleware"
+    #"corsheaders.middleware.CorsMiddleware"
 ]
 
 ROOT_URLCONF = "core.urls"
@@ -156,12 +155,10 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 # HTTPS settings 
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
-SECURE_SSL_REDIRECT  = True
+#CSRF_COOKIE_SECURE = True
+#SESSION_COOKIE_SECURE = True
+#SECURE_SSL_REDIRECT  = True
 
-CSRF_TRUSTED_ORIGINS = [
-    "https://star-techgroup.com",
-    "https://*.star-techgroup.com"
-]
+#CSRF_TRUSTED_ORIGINS = ["https://star-techgroup.com","https://*.star-techgroup.com"
+#]
 
