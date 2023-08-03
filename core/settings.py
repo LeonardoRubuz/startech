@@ -155,10 +155,10 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 # HTTPS settings 
-#CSRF_COOKIE_SECURE = True
-#SESSION_COOKIE_SECURE = True
-#SECURE_SSL_REDIRECT  = True
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT  = True
 
-#CSRF_TRUSTED_ORIGINS = ["https://star-techgroup.com","https://*.star-techgroup.com"
-#]
+CSRF_TRUSTED_ORIGINS = ["https://star-techgroup.com","https://*.star-techgroup.com"]
+
 
