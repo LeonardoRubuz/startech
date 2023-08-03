@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     # Third party
     'whitenoise.runserver_nostatic',
     "django.contrib.staticfiles",
-    #"corsheaders",
+    "corsheaders",
 
     # Local
     "visiteurs.apps.VisiteursConfig",
@@ -57,7 +57,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 
-    #"corsheaders.middleware.CorsMiddleware"
+    "corsheaders.middleware.CorsMiddleware"
 ]
 
 ROOT_URLCONF = "core.urls"
