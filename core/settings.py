@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 #SECRET_KEY = "django-insecure-@5o*l-0s7^21-q0f8r^bpe+a4r8!r+l@ar*0gnzeos+br^7##@"
 with open(os.path.join(BASE_DIR, 'secret_key.txt')) as f:
-    SECRET_KEY=f.read.strip()
+    SECRET_KEY=str(f).strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -155,6 +155,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Iframe 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
+
 
 # HTTPS settings 
 CSRF_COOKIE_SECURE = True
